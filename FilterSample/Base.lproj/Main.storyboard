@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FilterSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dg5-M4-yWJ" customClass="CIImageView" customModule="FilterSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="464"/>
+                            </glkView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R65-aE-k85">
+                                <rect key="frame" x="135.5" y="525" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="fR5-rb-phH"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="7RF-uz-KSp"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable filters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkn-lO-gr7">
+                                <rect key="frame" x="110.5" y="496" width="99" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="oKQ-mN-fG6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dg5-M4-yWJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KcX-GK-esV"/>
+                            <constraint firstItem="Lkn-lO-gr7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LFU-w1-4kN"/>
+                            <constraint firstAttribute="trailing" secondItem="Dg5-M4-yWJ" secondAttribute="trailing" id="LG4-z2-ZQN"/>
+                            <constraint firstItem="Lkn-lO-gr7" firstAttribute="top" secondItem="Dg5-M4-yWJ" secondAttribute="bottom" constant="12" id="UN0-Ap-77m"/>
+                            <constraint firstItem="R65-aE-k85" firstAttribute="top" secondItem="Lkn-lO-gr7" secondAttribute="bottom" constant="8" id="eB4-lA-jhx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R65-aE-k85" secondAttribute="bottom" constant="12" id="fHX-fD-vVv"/>
+                            <constraint firstItem="Dg5-M4-yWJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pxA-N7-QIv"/>
+                            <constraint firstItem="R65-aE-k85" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tuF-Ac-FoT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filterSwitch" destination="R65-aE-k85" id="Ukk-9A-BF5"/>
+                        <outlet property="imageView" destination="Dg5-M4-yWJ" id="GM3-JU-qKo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.25" y="122.53521126760563"/>
+        </scene>
+    </scenes>
+</document>
